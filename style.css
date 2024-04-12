@@ -3,14 +3,3 @@ body {
   height: 100%;
   width: 100%;
 }
-
-#newBook {
-  display: block;
-  margin: auto;
-  padding: 15px;
-  font-size: 20px;
-}
-
-#new-book-form {
-
-}
