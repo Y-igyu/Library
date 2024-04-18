@@ -14,8 +14,14 @@ function addBookToLibrary() {
   // stuff
 }
 
+const dialog = document.querySelector("#bookInfo");
 const newBook = document.querySelector("#newBook");
+const addBook = document.querySelector("#addBook");
 
 newBook.addEventListener("click", () => {
-  console.log("clicked");
+  dialog.showModal();
+});
+
+addBook.addEventListener("click", () => {
+  dialog.close();
 });
