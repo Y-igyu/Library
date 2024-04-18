@@ -14,9 +14,10 @@ header {
 }
 
 #newBook {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   font-size: 20px;
-  background-color: rgb(43, 221, 255);
 }
 
 .library {
@@ -69,4 +70,14 @@ fieldset {
   justify-content: space-evenly;
   padding: 10px;
   border: solid 1px black;
+}
+
+#addBook,
+#close {
+  padding: 20px;
+  font-size: 20px;
+}
+
+#addBook {
+  margin-right: 30px;
 }
