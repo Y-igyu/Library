@@ -28,13 +28,13 @@ function render() {
     if (book.read == true) {
       bookEl.innerHTML = `<p class="title">${book.title}</p>
         <p class="author">By: ${book.author}</p>
-        <p class="page">${book.page}</p>
+        <p class="page">${book.pages} pages</p>
         <p class="read">Read: <input type="checkbox" checked/></p>
         <button class="delete" onclick="removeBook(${i})">Delete</button>`;
     } else {
       bookEl.innerHTML = `<p class="title">${book.title}</p>
         <p class="author">By: ${book.author}</p>
-        <p class="page">${book.page}</p>
+        <p class="page">${book.pages} pages</p>
         <p class="read">Read: <input type="checkbox"/></p>
         <button class="delete" onclick="removeBook(${i})">Delete</button>`;
     }
