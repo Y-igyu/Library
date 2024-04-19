@@ -11,7 +11,6 @@ class Book {
 }
 
 const close = document.querySelector("#close");
-const del = document.querySelector(".delete");
 
 const dialog = document.querySelector("#bookInfo");
 const newBook = document.querySelector("#newBook");
@@ -31,17 +30,23 @@ function render() {
         <p class="author">By: ${book.author}</p>
         <p class="page">${book.page}</p>
         <p class="read">Read: <input type="checkbox" checked/></p>
-        <button class="delete">Delete</button>`;
+        <button class="delete" onclick="removeBook(${i})">Delete</button>`;
     } else {
       bookEl.innerHTML = `<p class="title">${book.title}</p>
         <p class="author">By: ${book.author}</p>
         <p class="page">${book.page}</p>
         <p class="read">Read: <input type="checkbox"/></p>
-        <button class="delete">Delete</button>`;
+        <button class="delete" onclick="removeBook(${i})">Delete</button>`;
     }
 
     libraryEl.appendChild(bookEl);
   }
+}
+
+// delete function
+function removeBook(index) {
+  myLibrary.splice(index, 1);
+  render();
 }
 
 function addBookToLibrary() {
@@ -84,11 +89,6 @@ close.addEventListener("click", () => {
   document.querySelector("#page").value = "";
   document.querySelector("#read").checked = false;
   dialog.close();
-});
-
-// delete book from library
-del.addEventListener("click", () => {
-  console.log("delete");
 });
 
 // checks if dialog input is empty
