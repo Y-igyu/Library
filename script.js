@@ -30,12 +30,14 @@ function render() {
       bookEl.innerHTML = `<p class="title">${book.title}</p>
         <p class="author">By: ${book.author}</p>
         <p class="page">${book.page}</p>
-        <p class="read">Read: <input type="checkbox" checked/></p>`;
+        <p class="read">Read: <input type="checkbox" checked/></p>
+        <button class="delete">Delete</button>`;
     } else {
       bookEl.innerHTML = `<p class="title">${book.title}</p>
         <p class="author">By: ${book.author}</p>
         <p class="page">${book.page}</p>
-        <p class="read">Read: <input type="checkbox"/></p>`;
+        <p class="read">Read: <input type="checkbox"/></p>
+        <button class="delete">Delete</button>`;
     }
 
     libraryEl.appendChild(bookEl);
